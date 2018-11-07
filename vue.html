@@ -3,17 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Vue</title>
-	<script src="./js/Vue.js"></script>
+	<script src="./js/renderTemplate.js"></script>
+	<script src="./js/minvue.js"></script>
 </head>
 <body>
 	<div id="app">
-		{{info}}
+		<p v-text='info'></p>		
+		{{info1}}<br>
+		<input v-mode='info2'><br>
+		{{1+2*3}}
 	</div>
 	<script type="text/javascript">
-		new Vue({
+	var vm=	new Vue({
 			el:'#app',
 			data:{
-				info:'hi,monica'
+				info:'hi,monica',				
+				info1:'i love you',
+				info2:'12'
 			}			
 		})
 	</script>
